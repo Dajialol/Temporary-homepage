@@ -49,13 +49,14 @@ body {
     background-color: #0d0d0d; /* Very dark background for the 'window' */
     border: 1px solid #444444;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
     margin-top: 2em;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     max-width: 950px; /* Increased from 800px to 950px */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
   }
   .window-bar {
     display: flex;
@@ -90,7 +91,10 @@ body {
     border-radius: 4px;
     font-style: italic;
     text-align: center;
-    margin-bottom: -0.5em;
+    margin-bottom: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .sneak-peek-content img {
@@ -100,8 +104,13 @@ body {
 
   .sneak-peek-content video {
     width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
     border-radius: 6px;
     display: block;
+    object-fit: contain;
+    margin: 0 auto;
   }
 
   footer {
