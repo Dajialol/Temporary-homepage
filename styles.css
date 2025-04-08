@@ -1,0 +1,192 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  .container {
+    max-width: 1000px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 6em;
+    color: #ffffff; /* White heading */
+    margin-top: 30px;
+    margin-bottom: -0.5em;
+    /* Simple gradient like the example */
+    background-clip: text;
+    font-weight: 800; /* Added font weight for a fatter font */
+    letter-spacing: 0px;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: #cccccc; /* Lighter gray */
+    margin-bottom: 1.5em;
+  }
+  
+  .description {
+    margin-top: -1.5em;
+
+  }
+  .status {
+    background: linear-gradient(
+      76deg,
+      #100a61,
+      #5a04a0
+    ); /* Gradient from dark gray to lighter gray */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 2em 0;
+    border: 1px solid #444444;
+  }
+  .sneak-peek-container {
+    background-color: #0d0d0d; /* Very dark background for the 'window' */
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 950px; /* Increased from 800px to 950px */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .window-bar {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444444;
+    margin-bottom: 10px;
+  }
+  .window-dots span {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .dot-red {
+    background-color: #ff5f57;
+  }
+  .dot-yellow {
+    background-color: #ffbd2e;
+  }
+  .dot-green {
+    background-color: #28c940;
+  }
+  .window-title {
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-left: 15px;
+  }
+  .sneak-peek-content {
+    color: #9a9a9a;
+    border-radius: 4px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: -0.5em;
+  }
+
+  .sneak-peek-content img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  footer {
+    margin-top: 3em;
+    color: #777777;
+    font-size: 0.9em;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2em;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+    p,
+    li {
+      font-size: 1em;
+    }
+    .sneak-peek-container {
+      max-width: 95%;
+    }
+  }
+
+  /* Contact boxes styles */
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    margin: -1em auto;
+    max-width: 500px;
+  }
+
+  .contact-box {
+    background: rgba(255, 255, 255, 0.05);
+    height: 10em;
+    border-radius: 10px;
+    padding: 2em;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .discord-button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 5px rgba(213, 211, 214, 0.4),
+      0 0 20px rgba(227, 226, 229, 0.2);
+  }
+
+  .contact-box h3 {
+    color: #ffffff;
+    margin-bottom: 0.8em;
+    margin-top: 0em;
+    font-size: 1.3em;
+  }
+
+  .contact-box p {
+    color: #cccccc;
+    margin-bottom: 1.5em;
+  }
+
+  .submit-button,
+  .discord-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #303030;
+    border: 1px solid #444444;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .submit-button:hover,
+  .discord-button:hover {
+    opacity: 0.9;
+  }
+
+  .discord-button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+
+    .contact-box {
+      width: 100%;
+    }
+  }
