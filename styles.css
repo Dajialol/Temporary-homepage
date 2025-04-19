@@ -205,3 +205,43 @@ body {
       width: 100%;
     }
   }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0.5em 0;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    min-width: 1.5em;
+    text-align: center;
+  }
+
+  .countdown-label {
+    font-size: 0.9em;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .countdown {
+        gap: 1em;
+    }
+    .countdown-number {
+        font-size: 1.8em;
+    }
+    .countdown-label {
+        font-size: 0.7em;
+    }
+  }
