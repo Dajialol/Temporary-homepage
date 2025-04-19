@@ -211,12 +211,18 @@ body {
     justify-content: center;
     gap: 2em;
     margin: 0.5em 0;
+    flex-wrap: nowrap;  /* Prevent wrapping */
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .countdown-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 0 auto;  /* Prevent items from growing or shrinking */
+    min-width: auto;  /* Remove any minimum width constraints */
   }
 
   .countdown-number {
@@ -225,6 +231,9 @@ body {
     color: #ffffff;
     min-width: 1.5em;
     text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.87),
+                 0 0 40px rgba(255, 255, 255, 0.349),
+                 0 0 50px rgba(255, 255, 255, 0.199);
   }
 
   .countdown-label {
@@ -232,11 +241,14 @@ body {
     color: #888888;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;  /* Prevent label wrapping */
   }
 
   @media (max-width: 600px) {
     .countdown {
         gap: 1em;
+        justify-content: space-around;  /* Better spacing on mobile */
+        padding: 0 5px;
     }
     .countdown-number {
         font-size: 1.8em;
