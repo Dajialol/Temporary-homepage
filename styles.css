@@ -44,6 +44,8 @@ body {
     border-radius: 8px;
     margin: 2em 0;
     border: 1px solid #444444;
+    width: 100%;
+    box-sizing: border-box;
   }
   .sneak-peek-container {
     background-color: #0d0d0d; /* Very dark background for the 'window' */
@@ -208,21 +210,18 @@ body {
 
   .countdown {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 2em;
-    margin: 0.5em 0;
-    flex-wrap: nowrap;  /* Prevent wrapping */
+    align-items: center;
+    margin: 0.5em auto;
     width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
+    max-width: 500px;
   }
 
   .countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 auto;  /* Prevent items from growing or shrinking */
-    min-width: auto;  /* Remove any minimum width constraints */
+    display: inline-block;
+    text-align: center;
+    margin: 0 15px;
   }
 
   .countdown-number {
@@ -246,14 +245,16 @@ body {
 
   @media (max-width: 600px) {
     .countdown {
-        gap: 1em;
-        justify-content: space-around;  /* Better spacing on mobile */
-        padding: 0 5px;
+      gap: 0;
+      justify-content: space-around;
+    }
+    .countdown-item {
+      margin: 0 5px;
     }
     .countdown-number {
-        font-size: 1.8em;
+      font-size: 1.8em;
     }
     .countdown-label {
-        font-size: 0.7em;
+      font-size: 0.7em;
     }
   }
